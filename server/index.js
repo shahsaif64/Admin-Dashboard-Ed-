@@ -40,7 +40,7 @@ const PORT= process.env.PORT || 9000;
 
 const DB_url= process.env.DB_URI;
 
-mongoose.connect(process.env.DB_URI , {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect(DB_url , {useNewUrlParser: true, useUnifiedTopology: true})
 .then(()=>{app.listen(PORT, ()=>{console.log(`Server port: ${PORT}`)})})
 .catch((err)=>{console.log(`error: ${err}`)})
 
